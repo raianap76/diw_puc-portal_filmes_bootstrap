@@ -1,0 +1,19 @@
+html {
+    height: 100%;
+  }
+  
+  small {
+    font-size: 0.7em;
+  }
+  
+  h4 {
+    line-height: normal;
+  }
+  
+  body,
+  ul,
+  li {
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+  }
