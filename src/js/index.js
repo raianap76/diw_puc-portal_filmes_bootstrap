@@ -2,7 +2,7 @@ const API_KEY  = '587bb97494c88930cda5a19ae251cee0';
 const BASE_API_URL = 'https://api.themoviedb.org/3/';
 const BASE_IMG_URL = 'http://image.tmdb.org/t/p/w342/';
 
-let listaGeneros = [];
+let Genders = [];
 let listaEmCartaz = [];
 
 function carregaGeneros() {
@@ -11,7 +11,7 @@ function carregaGeneros() {
 	
 	for (i = 0; i < resGeneros.genres.length; i++) {
 		let genero = resGeneros.genres[i];
-		listaGeneros[genero.id] = genero.name;
+		Genders[genero.id] = genero.name;
 		selectGenero.innerHTML += `<option value="${genero.id}">${genero.name}</option>`;
 	}
 }
@@ -39,7 +39,7 @@ function exibeFilmesEmCartaz() {
 		let generos = [];
 
 		for (j = 0; j < filme.genre_ids.length; j++) {
-			generos[j] = listaGeneros[filme.genre_ids[j]];
+			generos[j] = Genders[filme.genre_ids[j]];
 		}
 
 		texto += `
