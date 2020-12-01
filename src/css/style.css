@@ -1,4 +1,3 @@
-/* CSS Geral */
 
 html {
   height: 100%;
@@ -25,8 +24,11 @@ iframe {
   width: 100%;
 }
 
-.dark-background {
-  background: gainsboro;
+.backgroundGeneral {
+  background: rgb(219, 224, 235);
+}
+.backGorundFooter{
+  background:#75abe4
 }
 
 .title-row,
@@ -39,11 +41,12 @@ img {
   height: 100%;
 }
 
-@media (max-width: 767px) {
-  button.btn.btn-info.float-right {
-    width: 100%;
-  }
+div.container section#releases {
+  padding-top: 80px;
 }
+
+
+
 
 p.card-text {
   font-size: 0.8em;
@@ -59,15 +62,6 @@ footer {
   padding: 30px 0px;
 }
 
-@media (max-width: 767px) {
-  .footer-icon {
-    text-align: center;
-  }
-}
-
-/* FIM CSS Geral */
-
-/* Lançamentos */
 
 div.carousel-item div.lancamento-poster {
   text-align: center;
@@ -77,9 +71,6 @@ div.carousel-item div.lancamento-poster img {
   width: auto;
 }
 
-div.container section#section-lancamentos {
-  padding-top: 80px;
-}
 
 div#carousel-lancamentos div.carousel-item .lancamento-sinopse {
   font-size: 0.9em;
@@ -99,19 +90,12 @@ div#carousel-lancamentos div.carousel-inner {
   min-height: 430px;
 }
 
-@media (min-width: 991px) {
-  div#carousel-lancamentos div.carousel-inner {
-    padding-bottom: 50px;
-  }
-}
 
 div#carousel-lancamentos ol.carousel-indicators .active {
   background-color: #17a2b8;
 }
 
-/* FIM Lançamentos */
 
-/* Destaque */
 
 section#section-destaque {
   padding-top: 20px;
@@ -122,9 +106,6 @@ section#section-destaque {
   height: 100%;
 }
 
-/* FIM Destaque */
-
-/* Avaliações */
 
 section#section-avaliacoes div.cards-avaliacao div.col-12 {
   margin-bottom: 10px;
@@ -134,9 +115,6 @@ section#section-avaliacoes div.cards-avaliacao div.card {
   min-height: 200px;
 }
 
-/* FIM Avaliações */
-
-/* Entrevistas */
 
 section#section-entrevistas div.card {
   background: gainsboro;
@@ -147,10 +125,6 @@ section#section-entrevistas div.card h5.card-title {
   font-size: 1.2em;
 }
 
-/* FIM Entrevistas */
-
-/* Novidades */
-
 section#section-novidades div.sobre-col {
   line-height: normal;
   font-size: 0.9em;
@@ -160,9 +134,6 @@ section#section-novidades div.novidades-col {
   margin-bottom: 50px;
 }
 
-/* FIM Novidades */
-
-/* Filme */
 .lancamento-poster {
   padding-bottom: 20px;
 }
@@ -205,17 +176,7 @@ a {
   text-align: center;
 }
 
-@media (min-width: 991px) {
-  .produtoras-row {
-    position: absolute;
-    bottom: 0;
-    left: 30%;
-  }
-}
 
-/* FIM Filme */
-
-/* Pesquisa */
 div.container section#section-pesquisa {
   padding: 80px 10px 5px;
   overflow: hidden;
@@ -229,4 +190,28 @@ section#section-pesquisa img {
 .page-item.disabled .text-info {
   color: gray !important;
 }
-/* FIM Pesquisa */
+
+@media (max-width: 767px) {
+  button.btn.btn-info.float-right {
+    width: 100%;
+  }
+}
+
+@media (min-width: 991px) {
+  .produtoras-row {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+  }
+}
+@media (min-width: 991px) {
+  div#carousel-lancamentos div.carousel-inner {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-icon {
+    text-align: center;
+  }
+}

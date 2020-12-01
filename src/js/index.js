@@ -17,7 +17,7 @@ function carregaGeneros() {
 }
 
 function exibeFilmesEmCartaz() {
-	let carousel = document.querySelector('#carousel-lancamentos .carousel-inner');
+	let carousel = document.querySelector('#cardReleases .carousel-inner');
 	let texto = '';
 
 	let dados = JSON.parse(this.responseText);
@@ -46,14 +46,14 @@ function exibeFilmesEmCartaz() {
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 lancamento-poster">
-							<a target="_blank" class="text-info" href="/filme.html?id=${filme.id}">
+							<a target="_blank" class="text-info" href="/movie.html?id=${filme.id}">
 								<img src="${BASE_IMG_URL}${filme.poster_path}">
 							</a>
 						</div>
 						<div class="col-lg-6">
 							<h4>
 								<strong>
-									<a target="_blank" class="text-info" href="/filme.html?id=${filme.id}">
+									<a target="_blank" class="text-info" href="/movie.html?id=${filme.id}">
 										${filme.title}
 										<small class="text-info"><i class="fa fa-link" aria-hidden="true"></i></small>
 									</a>
@@ -120,7 +120,7 @@ function acrescentaAvaliacoes() {
 							</div>
 							<div class="col-10">
 								<h5 class="card-title">${revisao.author}</h5>
-								<h6 class="card-subtitle mb-2 text-muted">Sobre <a target="_blank" href="/filme.html?id=${dados.id}" class="text-info">${nomeFilme}</a></h6>
+								<h6 class="card-subtitle mb-2 text-muted">Sobre <a target="_blank" href="/movie.html?id=${dados.id}" class="text-info">${nomeFilme}</a></h6>
 								<p class="card-text">${revisao.content.length > 300 ? revisao.content.substr(0, 300) + " ..." : revisao.content}</p>
 								<small class="float-right">
 									<b>${data.toLocaleString()}</b>
@@ -161,7 +161,7 @@ function exibeFilmesEmDestaque() {
 
 		texto += `
 			<div class="filme-destaque col-12 col-md-6 col-lg-3 thumbnail ">
-				<a target="_blank" href="/filme.html?id=${filme.id}">
+				<a target="_blank" href="/movie.html?id=${filme.id}">
 					<img src="${BASE_IMG_URL}${filme.poster_path}" alt="${filme.title}">
 				</a>
 				<p>
@@ -205,7 +205,7 @@ function adicionaFilmesEmDestaque() {
 
 		texto += `
 			<div class="filme-destaque col-12 col-md-6 col-lg-3 thumbnail ">
-				<a target="_blank" href="/filme.html?id=${filme.id}">
+				<a target="_blank" href="/movie.html?id=${filme.id}">
 					<img src="${BASE_IMG_URL}${filme.poster_path}" alt="${filme.title}">
 				</a>
 				<p>
@@ -249,8 +249,8 @@ function buscaInformacoesIniciais() {
 	xhrDestaque.send();
 }
 
-document.getElementById("pesquisa-form").addEventListener("submit", function(e) {
-	window.location.href = `/pesquisa.html?query=${document.getElementById("input-search").value}`;
+document.getElementById("searchForm").addEventListener("submit", function(e) {
+	window.location.href = `/search.html?query=${document.getElementById("input-search").value}`;
 	e.preventDefault();
 });
 

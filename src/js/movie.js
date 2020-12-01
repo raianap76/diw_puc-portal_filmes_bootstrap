@@ -115,7 +115,7 @@ xhrFilme.onload = exibeFilme;
 xhrFilme.open('GET', `${BASE_API_URL}movie/${idFilme}?api_key=${API_KEY}&language=pt-BR`);
 xhrFilme.send();
 
-document.getElementById("pesquisa-form").addEventListener("submit", function(e) {
-	window.location.href = `/pesquisa.html?query=${document.getElementById("input-search").value}`;
+document.getElementById("searchForm").addEventListener("submit", function(e) {
+	window.location.href = `/search.html?query=${document.getElementById("input-search").value}`;
 	e.preventDefault();
 });
